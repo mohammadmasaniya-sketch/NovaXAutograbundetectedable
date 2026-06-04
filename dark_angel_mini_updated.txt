@@ -1,5 +1,5 @@
 -- DARK ANGEL MINI | Updated
-print("🖤 DARK ANGEL MINI - Loading...")
+print("★ DARK ANGEL MINI - Loading...")
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -710,20 +710,20 @@ local function createMobilePanel()
 end
 
 -- ================= INTERFACE GRAPHIQUE =================
-local C_BG      = Color3.fromRGB(5,0,15)
-local C_PANEL   = Color3.fromRGB(12,5,25)
-local C_ROW     = Color3.fromRGB(18,8,35)
-local C_ROW_HOV = Color3.fromRGB(30,12,55)
-local C_BORDER  = Color3.fromRGB(80,40,120)
-local C_BORDER2 = Color3.fromRGB(100,50,160)
-local C_HEADER  = Color3.fromRGB(8,3,20)
-local C_ACCENT  = Color3.fromRGB(220,180,255)
-local C_ACCENT2 = Color3.fromRGB(160,120,210)
-local C_DIM     = Color3.fromRGB(100,70,140)
+local C_BG      = Color3.fromRGB(6,6,6)
+local C_PANEL   = Color3.fromRGB(12,12,12)
+local C_ROW     = Color3.fromRGB(16,16,16)
+local C_ROW_HOV = Color3.fromRGB(26,26,26)
+local C_BORDER  = Color3.fromRGB(50,50,50)
+local C_BORDER2 = Color3.fromRGB(70,70,70)
+local C_HEADER  = Color3.fromRGB(4,4,4)
+local C_ACCENT  = Color3.fromRGB(240,240,240)
+local C_ACCENT2 = Color3.fromRGB(180,180,180)
+local C_DIM     = Color3.fromRGB(100,100,100)
 local C_WHITE   = Color3.fromRGB(255,255,255)
-local C_ON_BG   = Color3.fromRGB(80,30,130)
-local C_OFF_BG  = Color3.fromRGB(18,8,35)
-local C_KEY_BG  = Color3.fromRGB(10,0,25)
+local C_ON_BG   = Color3.fromRGB(50,50,50)
+local C_OFF_BG  = Color3.fromRGB(16,16,16)
+local C_KEY_BG  = Color3.fromRGB(0,0,0)
 
 local Anims = {
         idle1    = "rbxassetid://133806214992291",
@@ -950,7 +950,7 @@ gui.IgnoreGuiInset=true; gui.Parent=LP:WaitForChild("PlayerGui")
 local stealProgressBar = Instance.new("Frame", gui)
 stealProgressBar.Size = UDim2.new(0, 290, 0, 68)
 stealProgressBar.Position = UDim2.new(0.5, -145, 1, -85)
-stealProgressBar.BackgroundColor3 = Color3.fromRGB(5, 0, 15)
+stealProgressBar.BackgroundColor3 = Color3.fromRGB(6, 6, 6)
 stealProgressBar.BackgroundTransparency = 0
 stealProgressBar.BorderSizePixel = 0
 stealProgressBar.ZIndex = 100
@@ -958,8 +958,8 @@ stealProgressBar.ClipsDescendants = true
 local spCorner = Instance.new("UICorner", stealProgressBar)
 spCorner.CornerRadius = UDim.new(0, 14)
 local spStroke = Instance.new("UIStroke", stealProgressBar)
-spStroke.Color = Color3.fromRGB(100, 50, 160)
-spStroke.Thickness = 1.5
+spStroke.Color = Color3.fromRGB(255, 255, 255)
+spStroke.Thickness = 1
 
 -- ✦ FALLING STARS background for steal bar
 local function spawnStealStar()
@@ -967,8 +967,8 @@ local function spawnStealStar()
     local size = math.random(1, 2)
     s.Size = UDim2.new(0, size, 0, size)
     s.Position = UDim2.new(0, math.random(0, 290), 0, -4)
-    s.BackgroundColor3 = Color3.fromRGB(math.random(180,255), math.random(140,210), math.random(210,255))
-    s.BackgroundTransparency = math.random(0,3)*0.1
+    s.BackgroundColor3 = Color3.fromRGB(255,255,255)
+    s.BackgroundTransparency = math.random(0,5)*0.1
     s.BorderSizePixel = 0
     s.ZIndex = 100
     Instance.new("UICorner", s).CornerRadius = UDim.new(1,0)
@@ -991,7 +991,7 @@ pctLbl.Size = UDim2.new(0.42, 0, 0, 30)
 pctLbl.Position = UDim2.new(0, 14, 0, 7)
 pctLbl.BackgroundTransparency = 1
 pctLbl.Text = "0%"
-pctLbl.TextColor3 = Color3.fromRGB(220, 180, 255)
+pctLbl.TextColor3 = Color3.fromRGB(255, 255, 255)
 pctLbl.Font = Enum.Font.GothamBlack
 pctLbl.TextSize = 24
 pctLbl.TextXAlignment = Enum.TextXAlignment.Left
@@ -1003,7 +1003,7 @@ progressRadLbl.Size = UDim2.new(0.58, -14, 0, 30)
 progressRadLbl.Position = UDim2.new(0.42, 0, 0, 7)
 progressRadLbl.BackgroundTransparency = 1
 progressRadLbl.Text = "Steal Radius: "..AutoSteal.Radius
-progressRadLbl.TextColor3 = Color3.fromRGB(190, 140, 255)
+progressRadLbl.TextColor3 = Color3.fromRGB(200, 200, 200)
 progressRadLbl.Font = Enum.Font.GothamBlack
 progressRadLbl.TextSize = 14
 progressRadLbl.TextXAlignment = Enum.TextXAlignment.Right
@@ -1013,7 +1013,7 @@ progressRadLbl.ZIndex = 102
 local barTrack = Instance.new("Frame", stealProgressBar)
 barTrack.Size = UDim2.new(1, -28, 0, 14)
 barTrack.Position = UDim2.new(0, 14, 0, 44)
-barTrack.BackgroundColor3 = Color3.fromRGB(18, 8, 35)
+barTrack.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 barTrack.BorderSizePixel = 0
 barTrack.ZIndex = 102
 Instance.new("UICorner", barTrack).CornerRadius = UDim.new(1, 0)
@@ -1021,7 +1021,7 @@ Instance.new("UICorner", barTrack).CornerRadius = UDim.new(1, 0)
 -- Fill: purple gradient
 local barFill = Instance.new("Frame", barTrack)
 barFill.Size = UDim2.new(0, 0, 1, 0)
-barFill.BackgroundColor3 = Color3.fromRGB(160, 80, 255)
+barFill.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 barFill.BorderSizePixel = 0
 barFill.ZIndex = 103
 Instance.new("UICorner", barFill).CornerRadius = UDim.new(1, 0)
@@ -1129,7 +1129,7 @@ main.Position=UDim2.new(0,20,0,20)
 main.BackgroundColor3=C_BG; main.BorderSizePixel=0; main.Active=true; main.ClipsDescendants=true
 Instance.new("UICorner",main).CornerRadius=UDim.new(0,18)
 local mainStroke = Instance.new("UIStroke",main)
-mainStroke.Color=C_BORDER2; mainStroke.Thickness=1.5
+mainStroke.Color=Color3.fromRGB(255,255,255); mainStroke.Thickness=1
 
 -- ✦ FALLING STARS background for main panel
 local function spawnMainStar()
@@ -1137,8 +1137,8 @@ local function spawnMainStar()
     local size = math.random(1, 3)
     s.Size = UDim2.new(0, size, 0, size)
     s.Position = UDim2.new(0, math.random(0, 270), 0, -6)
-    s.BackgroundColor3 = Color3.fromRGB(math.random(200,255), math.random(160,220), math.random(220,255))
-    s.BackgroundTransparency = math.random(0,3)*0.1
+    s.BackgroundColor3 = Color3.fromRGB(255,255,255)
+    s.BackgroundTransparency = math.random(0,5)*0.1
     s.BorderSizePixel = 0
     s.ZIndex = 1
     Instance.new("UICorner", s).CornerRadius = UDim.new(1,0)
@@ -1199,45 +1199,45 @@ header.Size=UDim2.new(1,0,0,56); header.BackgroundColor3=C_HEADER; header.Border
 Instance.new("UICorner",header).CornerRadius=UDim.new(0,18)
 local headerDiv = Instance.new("Frame",header)
 headerDiv.Size=UDim2.new(1,-20,0,1); headerDiv.Position=UDim2.new(0,10,1,-1)
-headerDiv.BackgroundColor3=C_BORDER2; headerDiv.BorderSizePixel=0; headerDiv.ZIndex=6
+headerDiv.BackgroundColor3=Color3.fromRGB(255,255,255); headerDiv.BorderSizePixel=0; headerDiv.ZIndex=6
 
 -- Angel icon + title
 local angelIcon = Instance.new("TextLabel",header)
 angelIcon.Size=UDim2.new(0,28,0,28); angelIcon.Position=UDim2.new(0,10,0.5,-14)
-angelIcon.BackgroundTransparency=1; angelIcon.Text="🖤"
+angelIcon.BackgroundTransparency=1; angelIcon.Text="★"
 angelIcon.Font=Enum.Font.GothamBlack; angelIcon.TextSize=18; angelIcon.ZIndex=7
 
 local titleLbl = Instance.new("TextLabel",header)
 titleLbl.Size=UDim2.new(1,-70,0,22); titleLbl.Position=UDim2.new(0,40,0.5,-11)
 titleLbl.BackgroundTransparency=1; titleLbl.Text="DARK ANGEL MINI"
-titleLbl.TextColor3=Color3.fromRGB(220,180,255); titleLbl.Font=Enum.Font.GothamBlack; titleLbl.TextSize=15
+titleLbl.TextColor3=Color3.fromRGB(255,255,255); titleLbl.Font=Enum.Font.GothamBlack; titleLbl.TextSize=15
 titleLbl.TextXAlignment=Enum.TextXAlignment.Left; titleLbl.ZIndex=6
 local titleStroke = Instance.new("UIStroke",titleLbl)
-titleStroke.Color=Color3.fromRGB(120,60,200); titleStroke.Thickness=1
+titleStroke.Color=Color3.fromRGB(80,80,80); titleStroke.Thickness=1
 
 local subtitleLbl = Instance.new("TextLabel",header)
 subtitleLbl.Size=UDim2.new(1,-70,0,12); subtitleLbl.Position=UDim2.new(0,40,0.5,12)
 subtitleLbl.BackgroundTransparency=1; subtitleLbl.Text="✦ updated ✦"
-subtitleLbl.TextColor3=Color3.fromRGB(130,80,200); subtitleLbl.Font=Enum.Font.GothamBold; subtitleLbl.TextSize=9
+subtitleLbl.TextColor3=Color3.fromRGB(130,130,130); subtitleLbl.Font=Enum.Font.GothamBold; subtitleLbl.TextSize=9
 subtitleLbl.TextXAlignment=Enum.TextXAlignment.Left; subtitleLbl.ZIndex=6
 
 local closeBtn = Instance.new("TextButton",gui)
 closeBtn.Size=UDim2.new(0,28,0,28)
-closeBtn.BackgroundColor3=Color3.fromRGB(20,5,40); closeBtn.BorderSizePixel=0
-closeBtn.Text="✕"; closeBtn.TextColor3=Color3.fromRGB(160,100,220)
+closeBtn.BackgroundColor3=Color3.fromRGB(12,12,12); closeBtn.BorderSizePixel=0
+closeBtn.Text="✕"; closeBtn.TextColor3=Color3.fromRGB(200,200,200)
 closeBtn.Font=Enum.Font.GothamBlack; closeBtn.TextSize=13; closeBtn.ZIndex=50
 Instance.new("UICorner",closeBtn).CornerRadius=UDim.new(1,0)
 local closeBtnStroke = Instance.new("UIStroke",closeBtn)
-closeBtnStroke.Color=C_BORDER2; closeBtnStroke.Thickness=1.5
+closeBtnStroke.Color=Color3.fromRGB(255,255,255); closeBtnStroke.Thickness=1
 closeBtnRef = closeBtn
 
 closeBtn.MouseEnter:Connect(function()
-        TweenService:Create(closeBtn,TweenInfo.new(0.12),{BackgroundColor3=Color3.fromRGB(100,20,160),TextColor3=C_WHITE}):Play()
-        TweenService:Create(closeBtnStroke,TweenInfo.new(0.12),{Color=Color3.fromRGB(180,80,255)}):Play()
+        TweenService:Create(closeBtn,TweenInfo.new(0.12),{BackgroundColor3=Color3.fromRGB(40,40,40),TextColor3=C_WHITE}):Play()
+        TweenService:Create(closeBtnStroke,TweenInfo.new(0.12),{Color=Color3.fromRGB(255,255,255)}):Play()
 end)
 closeBtn.MouseLeave:Connect(function()
-        TweenService:Create(closeBtn,TweenInfo.new(0.12),{BackgroundColor3=Color3.fromRGB(20,5,40),TextColor3=Color3.fromRGB(160,100,220)}):Play()
-        TweenService:Create(closeBtnStroke,TweenInfo.new(0.12),{Color=C_BORDER2}):Play()
+        TweenService:Create(closeBtn,TweenInfo.new(0.12),{BackgroundColor3=Color3.fromRGB(12,12,12),TextColor3=Color3.fromRGB(200,200,200)}):Play()
+        TweenService:Create(closeBtnStroke,TweenInfo.new(0.12),{Color=Color3.fromRGB(255,255,255)}):Play()
 end)
 closeBtn.MouseButton1Click:Connect(function()
         main.Visible = false
@@ -1249,11 +1249,11 @@ miniBtn = Instance.new("TextButton",gui)
 miniBtn.Name = "VexulMiniButton"
 miniBtn.Size = UDim2.new(0,160,0,32)
 miniBtn.Position = UDim2.new(0,8,0,66)
-miniBtn.BackgroundColor3 = Color3.fromRGB(5,0,15)
+miniBtn.BackgroundColor3 = Color3.fromRGB(6,6,6)
 miniBtn.BackgroundTransparency = 0
 miniBtn.BorderSizePixel = 0
-miniBtn.Text = "🖤 DARK ANGEL MINI"
-miniBtn.TextColor3 = Color3.fromRGB(200,150,255)
+miniBtn.Text = "★ DARK ANGEL MINI"
+miniBtn.TextColor3 = Color3.fromRGB(255,255,255)
 miniBtn.Font = Enum.Font.GothamBlack
 miniBtn.TextSize = 10
 miniBtn.AutoButtonColor = false
@@ -1261,7 +1261,7 @@ miniBtn.Visible = false
 miniBtn.ZIndex = 50
 Instance.new("UICorner", miniBtn).CornerRadius = UDim.new(0, 8)
 local miniStroke = Instance.new("UIStroke", miniBtn)
-miniStroke.Color = Color3.fromRGB(100,50,160); miniStroke.Thickness = 1.5
+miniStroke.Color = Color3.fromRGB(255,255,255); miniStroke.Thickness = 1
 
 miniBtn.MouseButton1Click:Connect(function()
         main.Visible = true
@@ -1270,12 +1270,12 @@ miniBtn.MouseButton1Click:Connect(function()
 end)
 
 miniBtn.MouseEnter:Connect(function()
-        TweenService:Create(miniBtn, TweenInfo.new(0.1), {BackgroundColor3 = Color3.fromRGB(20,8,45)}):Play()
-        TweenService:Create(miniStroke, TweenInfo.new(0.1), {Color = Color3.fromRGB(160,80,255)}):Play()
+        TweenService:Create(miniBtn, TweenInfo.new(0.1), {BackgroundColor3 = Color3.fromRGB(22,22,22)}):Play()
+        TweenService:Create(miniStroke, TweenInfo.new(0.1), {Color = Color3.fromRGB(255,255,255)}):Play()
 end)
 miniBtn.MouseLeave:Connect(function()
-        TweenService:Create(miniBtn, TweenInfo.new(0.1), {BackgroundColor3 = Color3.fromRGB(5,0,15)}):Play()
-        TweenService:Create(miniStroke, TweenInfo.new(0.1), {Color = Color3.fromRGB(100,50,160)}):Play()
+        TweenService:Create(miniBtn, TweenInfo.new(0.1), {BackgroundColor3 = Color3.fromRGB(6,6,6)}):Play()
+        TweenService:Create(miniStroke, TweenInfo.new(0.1), {Color = Color3.fromRGB(255,255,255)}):Play()
 end)
 
 miniButtonRef = miniBtn
@@ -1904,7 +1904,7 @@ startAutoLeft = function()
                 local root = char:FindFirstChild("HumanoidRootPart")
                 local hum2 = char:FindFirstChildOfClass("Humanoid")
                 if not root or not hum2 then return end
-                local spd = (State.autoLeftPhase <= 2) and State.normalSpeed or State.laggerSpeed
+                local spd = (State.autoLeftPhase <= 2) and State.normalSpeed or State.carrySpeed
                 local target = leftPOS[State.autoLeftPhase]
                 if not target then return end
                 local tgt = Vector3.new(target.X, root.Position.Y, target.Z)
@@ -1952,7 +1952,7 @@ startAutoRight = function()
                 local root = char:FindFirstChild("HumanoidRootPart")
                 local hum2 = char:FindFirstChildOfClass("Humanoid")
                 if not root or not hum2 then return end
-                local spd = (State.autoRightPhase <= 2) and State.normalSpeed or State.laggerSpeed
+                local spd = (State.autoRightPhase <= 2) and State.normalSpeed or State.carrySpeed
                 local target = rightPOS[State.autoRightPhase]
                 if not target then return end
                 local tgt = Vector3.new(target.X, root.Position.Y, target.Z)
